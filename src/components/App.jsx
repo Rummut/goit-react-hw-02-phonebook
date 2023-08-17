@@ -19,7 +19,7 @@ export class App extends Component {
   handleContactsAdd = newContact => {
     const { contacts } = this.state;
     const { name } = newContact;
-    const isNameContain = contacts.find(contact => contact.name === name);
+    const isNameContain = contacts.find(contact => contact.name.toLowerCase() === name);
 
     if (isNameContain) {
       alert(`${name} is already in contacts.`);
